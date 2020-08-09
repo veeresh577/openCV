@@ -2,16 +2,18 @@ import cv2
 import time
 import numpy as np
 import random
-"""openCV to solve Harry Potter Invisible Cloak"""
-"""Dated 9-02-2020, Author:Gaurav Chatterjee"""
+import matplotlib.pyplot as plt
 
 """Import opencv(cv2),Numpy array(numpy)"""
 
 
 """## Preparation for writing the ouput video"""
+frame_height= 480
+frame_width = 640
+frame_per_sec = 20.0
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 i = random.randrange(1,1000,1)
-out = cv2.VideoWriter('output'+str(i)+'.avi',fourcc,20.0, (640,480))
+out = cv2.VideoWriter('Naruto'+str(i)+'.avi',fourcc,frame_per_sec, (frame_width,frame_height))
 
 cap = cv2.VideoCapture(0)
 #img = cv2.imread('buffer_place/images.jpg')
