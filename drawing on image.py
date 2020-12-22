@@ -1,10 +1,13 @@
 import cv2
 import numpy as np
+import random
 
 def circle(event,x,y,flags,param):
 
     if event == cv2.EVENT_LBUTTONDOWN:
-        cv2.circle(img,(x,y),25,(0,150,0),1)
+        colour= random.randrange(100,250)
+        cv2.circle(img,(x,y),25,(0,colour,0),1)
+        print(x,y)
 
 cv2.namedWindow(winname='my_drawing')
 
